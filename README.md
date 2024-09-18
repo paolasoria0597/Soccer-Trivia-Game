@@ -1,4 +1,4 @@
-![Soccer trivia game landing page image. Question card displayed with a soccer filed background]()
+![Soccer trivia game landing page image. Question card displayed with a soccer filed background](https://app.gemoo.com/share/image-annotation/695031953423319040?codeId=v6BaEXR99x8k9)
 
 # **Soccer Trivia Game**
 
@@ -19,7 +19,7 @@ This game challenges users with a series of fifteen soccer related trivia questi
 
 # **Game Faetures**
 
-1. True/false Questions: The player answer the soccer related trivia question displayed on each card by choosing "true" or "false".
+1. True/false Questions: The player answers the soccer related trivia question displayed on each card by choosing "true" or "false".
 
 2. Score Tracking: The player's socre is updated below the question card.
 
@@ -43,7 +43,4 @@ This game challenges users with a series of fifteen soccer related trivia questi
 - add more trivia card questions and have different ways to display them.
 - Add different difficulty levels.
 
-# Further Contributions
-
-// add comments or further changes to this project
 // deploy link ""
