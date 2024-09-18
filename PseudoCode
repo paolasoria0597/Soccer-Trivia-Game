@@ -1,0 +1,44 @@
+User Stories for my soccer trivia game:
+
+As a user I want to see a landing page so that I know what site Im in
+As a user I want to see clear text in bold letters that is easy to read with instructions as to how the trivia card game will work
+As a user I want to see two buttons that provide me with a true or false option so that I can click and answer the question
+As a user once I submit my answer I want the card to flip so I can see if my answer is correct or not
+As a user I want to have a next button that I can click that allows me to move to the next card or a restart button that allows me to answer the question again.
+As a user, once I'm done going through all the cards, I want my final score to be displayed and want to have the option to restart the game again.
+
+Pseudocode for Soccer Trivia Game
+
+1. Set Up the Game
+
+Create a list (array) of trivia questions.
+Each question has a statement, a correct answer (true/false), and an explanation.
+Start the Game
+
+2. set up the game state and initialze the score to 0.
+   Set the current question index to the first question.
+   Display the first trivia question on the screen.
+   Player Answers a Question
+
+3. When the player clicks either "True" or "False":
+   Check if the player’s answer matches the correct answer.
+   If the answer is correct, increase the score by 1.
+   Show feedback (correct or incorrect) along with an explanation.
+   Move to the Next Question
+
+4. After the feedback is shown:
+   Move to the next question in the list.
+   If there are more questions, display the next question.
+   If there are no more questions, end the game.
+   End the Game
+
+5. When all questions are answered:
+   Display a message saying the game is over.
+   Show the player's final score.
+   Show a congratulatory or failure message/image based on their score.
+   Restart the Game (Optional)
+
+6. If the player clicks "Restart":
+   Reset the score to 0.
+   Set the current question index back to the first question.
+   Start the game again from the beginning
