@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trivia Card Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body> 
+        <div class="heading">
+    <h1> Welcome to the Soccer Trivia Game</h1>
+    <p>  Test your soccer knowlege by answering these True or False questions. </p>
+        <p> Click on either the true or false button below the question to submit your answer.</p>
+    <img src="https://media.istockphoto.com/id/1312143573/photo/football-soccer-ball-on-grass-field-on-stadium.jpg?s=2048x2048&w=is&k=20&c=9J16TAlakpfgTRy7neoBxJkETMlLWRg2tDQrPODLaMQ="
+        alt="soccer ball in the middle of a field"> 
+        </div>
+    <div class="game-container">
+        <h1>Soccer Trivia</h1>
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <p id="question"></p>
+                    <img id="final-img" src="" alt="">
+                    <div class="buttons">
+                        <button id="true-btn">True</button>
+                        <button id="false-btn">False</button>
+                    </div>
+                </div>
+                <div class="card-back">
+                    <h2 id="answer-title"></h2>
+                    <p id="answer-result"></p>
+                    <button id="next-btn">Next Question</button>
+                </div>
+            </div>
+        </div>
+        <p>Score: <span id="score">0</span></p>
+        <button id="reset-btn">Reset Game</button>
+    </div>
+    <p class="image-credit">
+        Background Image Credit: <a href="https://img.freepik.com/free-photo/sport-football-arena-photography_1409-4807.jpg?t=st=1726526251~exp=1726529851~hmac=1b22c2100213e0e76e5d517bccaf53be80468fa7686e232b1781781ad8b49c21&w=2000">Freepik</a>
+    </p>
+
+    <script src="script.js"></script>
+</body>
+</html>

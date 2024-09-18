@@ -1,0 +1,143 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  background-image: url('https://img.freepik.com/free-photo/sport-football-arena-photography_1409-4807.jpg?t=st=1726526251~exp=1726529851~hmac=1b22c2100213e0e76e5d517bccaf53be80468fa7686e232b1781781ad8b49c21&w=2000');
+  background-size: cover; /* Ensures the image covers the entire screen */
+  background-position: center; /* Centers the image */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+  gap: 30px; 
+  height: 100vh;
+  margin: 0;
+}
+img{
+    display: block; 
+    border-radius: 50%; 
+    width:25%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.heading{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: flex-start;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+
+}
+
+.game-container {
+  background-color: white;
+  display:flex; 
+  flex-direction: column;
+  justify-content:center;
+  align-items: center;
+  width: 500px;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.card {
+  margin-bottom: 20px;
+  height: 250px;
+  width: 100%;
+
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+.card-flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+  position: absolute;
+  width: 90%;
+  height: 90%;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Pushes buttons to the bottom */
+  align-items: center;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.card-front {
+  background-color: #007BFF;
+  color: white;
+}
+
+.card-back {
+  background-color: #007BFF;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+#question {
+  font-size: 20px;
+  text-align: center;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+  padding-bottom: 20px; /* Adds space below buttons */
+}
+
+button {
+  background-color: #fff;
+  color: #007BFF;
+  border: 2px solid #007BFF;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #007BFF;
+  color: #fff;
+}
+
+#next-btn, #reset-btn {
+  background-color: #767a7f;
+  color: white;
+  border: none;
+}
+
+#next-btn:hover, #reset-btn:hover {
+  background-color: #5f5a5a;
+}
+
+#score {
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 20px; /* Space above the score */
+}
+
+.hidden {
+  display: none;
+}
+p.image-credit {
+  color: rgba(243, 242, 238, 0.917);
+  font-weight: bold;
+}
+
