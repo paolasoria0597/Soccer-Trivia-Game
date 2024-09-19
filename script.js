@@ -47,8 +47,8 @@ const triviaGame = {
     audio.play()
   },
 
-  playLoserSound: function() {
-    const audio = document.getElementById('loser-audio');
+  playFinalWhistleSound: function() {
+    const audio = document.getElementById('final-whistle-audio');
     audio.play()
   },
 
@@ -78,7 +78,7 @@ const triviaGame = {
             finalImg.src = "https://media1.tenor.com/m/AQ4Dbn0fceYAAAAd/ouch-slow-mo.gif"
             finalImg.alt = "Man getting hit in the face with a soccer ball"
             questionElement.textContent = "You failed!";
-            this.playLoserSound()
+            this.playFinalWhistleSound()
           }
       }
   },
