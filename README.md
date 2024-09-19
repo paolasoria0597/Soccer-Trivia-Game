@@ -25,7 +25,7 @@ All sounds provided by [Zapsplat](https://www.zapsplat.com/) is licensed under [
 # **Project Description**
 This game challenges users with a series of fifteen soccer related trivia questions. The player must answer each question as either "true" or "false". After answering each question, the correct answer and a brief explanation are revealed and the player's score is updated. Once all the questions are answered the final score is displayed along with the option to restart the game. The reason behind creating this game is to test the knowledge of users who are big soccer fans just like me or who are just curious to learn some interesting facts about the sport.
 
-##link to project planning 
+[Project Planning Link](https://github.com/paolasoria0597/Soccer-Trivia-Game/blob/main/PseudoCode)
 # **Game Features**
 
 1. True/false Questions: The player answers the soccer related trivia question displayed on each card by choosing "true" or "false".
