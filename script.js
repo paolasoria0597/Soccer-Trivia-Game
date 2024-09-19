@@ -77,7 +77,7 @@ const triviaGame = {
             finalImg.classList.remove("hidden")
             finalImg.src = "https://media1.tenor.com/m/AQ4Dbn0fceYAAAAd/ouch-slow-mo.gif"
             finalImg.alt = "Man getting hit in the face with a soccer ball"
-            questionElement.textContent = "You failed!";
+            questionElement.textContent = "You scored less than 10 points. You have failed!";
             this.playFinalWhistleSound()
           }
       }
