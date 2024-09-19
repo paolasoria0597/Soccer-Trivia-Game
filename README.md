@@ -1,4 +1,4 @@
-![Soccer trivia game landing page image. Question card displayed with a soccer filed background](https://app.gemoo.com/share/image-annotation/695031953423319040?codeId=v6BaEXR99x8k9)
+![Soccer trivia game landing page image. Question card displayed with a soccer filed background](./images/wireframe.png)
 
 # **Soccer Trivia Game**
 

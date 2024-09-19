@@ -1,55 +1,81 @@
+/* Fonts */
+
+.silkscreen-regular {
+  font-family: "Silkscreen", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.silkscreen-bold {
+  font-family: "Silkscreen", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-  background-image: url('https://img.freepik.com/free-photo/sport-football-arena-photography_1409-4807.jpg?t=st=1726526251~exp=1726529851~hmac=1b22c2100213e0e76e5d517bccaf53be80468fa7686e232b1781781ad8b49c21&w=2000');
-  background-size: cover; /* Ensures the image covers the entire screen */
-  background-position: center; /* Centers the image */
+  font-family: "Moderustic", serif;
+  background-color: #f4f4f4; /* Fallback color */
   display: flex;
   justify-content: center;
   align-items: center;
   align-content: center;
   flex-direction: column;
-  gap: 30px; 
+  gap: 30px;
   height: 100vh;
   margin: 0;
+  position: relative; /* To allow positioning of the video */
 }
-img{
-    display: block; 
-    border-radius: 50%; 
-    width:25%;
-    margin-left: auto;
-    margin-right: auto;
+
+#background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the video covers the entire background */
+  z-index: -1; /* Puts the video behind other elements */
 }
-.heading{
+
+.full-page-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-self: flex-start;
-  align-items: center;
-  justify-content: space-between;
-  color: white;
-
+  height: 100vh;
+  align-items: flex-start;
+  gap: 8%;
 }
 
-.game-container {
-  background-color: white;
-  display:flex; 
+.item {
+  display: flex;
   flex-direction: column;
-  justify-content:center;
-  align-items: center;
+  justify-content: center; /* Centers the content horizontally */
+  align-items: center; /* Centers the content vertically */
+}
+
+
+.heading{
+  color: white;
+}
+
+
+.game-container {
+  color: #fff;
   width: 500px;
   padding: 20px;
   border-radius: 10px;
+  border: 2px solid #fff;
   text-align: center;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 16px rgb(255, 254, 254)
 }
 
 h1 {
-  font-size: 24px;
+  font-size: 30px;
   margin-bottom: 20px;
 }
 
 .card {
+  display: flex;
+  flex-direction: column;
   margin-bottom: 20px;
   height: 250px;
   width: 100%;
@@ -57,11 +83,13 @@ h1 {
 }
 
 .card-inner {
-  position: relative;
   width: 100%;
   height: 100%;
   transform-style: preserve-3d;
   transition: transform 0.6s;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .card-flipped .card-inner {
@@ -70,7 +98,7 @@ h1 {
 
 .card-front, .card-back {
   position: absolute;
-  width: 90%;
+  width: 80%;
   height: 90%;
   backface-visibility: hidden;
   display: flex;
@@ -82,14 +110,24 @@ h1 {
 }
 
 .card-front {
-  background-color: #007BFF;
+  background-color: rgba(0, 123, 255, 0.6); 
+  border-radius: 10px;
   color: white;
 }
 
+.card-front #question {
+  font-size: x-large;
+}
+
 .card-back {
-  background-color: #007BFF;
+  background-color: rgba(0, 123, 255, 0.6); 
   color: white;
   transform: rotateY(180deg);
+}
+
+.card-back > p {
+  font-size: medium;
+  letter-spacing: 1px;
 }
 
 #question {
@@ -104,8 +142,8 @@ h1 {
 }
 
 button {
-  background-color: #fff;
-  color: #007BFF;
+  background-color: #000;
+  color: #fff;
   border: 2px solid #007BFF;
   padding: 10px 20px;
   border-radius: 5px;
@@ -118,13 +156,13 @@ button:hover {
 }
 
 #next-btn, #reset-btn {
-  background-color: #767a7f;
+  background-color: #000;
   color: white;
-  border: none;
+  border: 2px solid #007BFF;
 }
 
 #next-btn:hover, #reset-btn:hover {
-  background-color: #5f5a5a;
+  background-color: #007BFF;
 }
 
 #score {
@@ -136,8 +174,12 @@ button:hover {
 .hidden {
   display: none;
 }
-p.image-credit {
-  color: rgba(243, 242, 238, 0.917);
-  font-weight: bold;
-}
 
+
+img{
+  display: block; 
+  border-radius: 40%; 
+  width:50%;
+  margin-left: auto;
+  margin-right: auto;
+}

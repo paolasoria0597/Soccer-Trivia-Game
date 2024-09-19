@@ -30,45 +30,72 @@ const triviaGame = {
   score: 0,
   currentQuestionIndex: 0,
 
+
+  // Sound functions
+  playWhistleSound: function() {
+    const audio = document.getElementById('whistle-audio');
+    audio.play()
+  },
+
+  playGoalSound: function() {
+    const audio = document.getElementById('goal-audio');
+    audio.play()
+  },
+
+  playCheerSound: function() {
+    const audio = document.getElementById('cheer-audio');
+    audio.play()
+  },
+
+  playLoserSound: function() {
+    const audio = document.getElementById('loser-audio');
+    audio.play()
+  },
+
   // Display the current question
   displayQuestion: function() {
       const questionElement = document.getElementById("question");
-      const finalImg = document.querySelector("#final-img")
+      const finalImg = document.getElementById("final-img")
       const buttonsContainer = document.querySelector(".buttons")
 
-      if (this.currentQuestionIndex < this.questions.length) {
-          questionElement.textContent = this.questions[this.currentQuestionIndex].question;
-      } else {
+      if (this.currentQuestionIndex < this.questions.length) { //Safeguarding against out of bounds error in the array. I want to make sure that my question index is always less than the length.
+        finalImg.classList.add("hidden")  
+        questionElement.textContent = this.questions[this.currentQuestionIndex].question;
+      } else { // at this point all questions have been answered. So im handling the end of the game
           questionElement.textContent = "You have completed the trivia!";
           document.querySelector('.card').classList.remove('card-flipped'); // Reset flip if finished
           // get rid of true/false buttons
           buttonsContainer.classList.add("hidden")
           // display img based on score
-          if (this.score > 4) {
+          if (this.score > 10) { // this is how you win the game
+            finalImg.classList.remove("hidden")
             finalImg.src = "https://media1.tenor.com/images/d5d11390699ef5776613e3fd6dc2719c/tenor.gif?itemid=11052297"
             finalImg.alt = "fireworks"
-          } else if (this.score > 5) {
-            finalImg.src = ""
-            finalImg.alt = ""
-          } else {
+            questionElement.textContent="Good job, you know what a real sport is!"
+            this.playCheerSound()
+          }  else {
+            finalImg.classList.remove("hidden")
             finalImg.src = "https://media1.tenor.com/m/AQ4Dbn0fceYAAAAd/ouch-slow-mo.gif"
             finalImg.alt = "Man getting hit in the face with a soccer ball"
             questionElement.textContent = "You failed!";
+            this.playLoserSound()
           }
       }
   },
 
   // Check answer, show result, and flip the card
   checkAnswer: function(userAnswer) {
-      if (this.currentQuestionIndex < this.questions.length) {
-          const currentQuestion = this.questions[this.currentQuestionIndex];
-          const resultTitle = document.getElementById("answer-title");
+      if (this.currentQuestionIndex < this.questions.length) { // this if statement checks that im within the bounds of the questions array. 
+          const currentQuestion = this.questions[this.currentQuestionIndex]; //Grabbing the current question object
+          const resultTitle = document.getElementById("answer-title"); 
           const resultText = document.getElementById("answer-result");
           if (userAnswer === currentQuestion.answer) {
               this.score++;
               resultTitle.textContent = "Correct!";
               resultText.textContent = currentQuestion.explanation;
+              this.playGoalSound()
           } else {
+              this.playWhistleSound()
               resultTitle.textContent = "Wrong!";
               resultText.textContent = currentQuestion.explanation;
           }
@@ -95,8 +122,6 @@ const triviaGame = {
       this.displayQuestion();
       document.querySelector('.card').classList.remove('card-flipped'); // Reset card flip
       buttonsContainer.classList.remove("hidden") // bring buttons back after final screen
-      finalImg.src = "" // reset image src to empty
-      finalImg.alt = "" // reset image alt to empty
   }
 };
 
