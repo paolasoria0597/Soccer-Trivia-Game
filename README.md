@@ -1,6 +1,8 @@
 ![Soccer trivia game landing page image. Question card displayed with a soccer filed background](./assets/images/wireframe.png)
 
 # **Soccer Trivia Game**
+[Deployed Game Link](https://paolasoria0597.github.io/Soccer-Trivia-Game/)
+
 
 Welcome to the Soccer Trivia Game! This is a fun interactive trivia game that will test your knowledge about soccer. This game depicts a series of true/false questions, with feedback and scroing provided once an answer is submitted.
 
@@ -12,7 +14,7 @@ Welcome to the Soccer Trivia Game! This is a fun interactive trivia game that wi
 - Technologies used
 - How to play
 - Project Structure
-- Stretch Goals
+- Future Enhancements
 
 # **Attributions**
 All sounds provided by [Zapsplat](https://www.zapsplat.com/) is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
@@ -46,7 +48,6 @@ This game challenges users with a series of fifteen soccer related trivia questi
 # **Future Enhancements**:
 
 - Add more animations
-- add more trivia card questions and have different ways to display them.
+- Add more trivia card questions and have different ways to display them.
+- Expand Trivia Questions to be more than true/false
 - Add different difficulty levels.
-
-// deploy link ""
